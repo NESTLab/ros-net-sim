@@ -16,12 +16,8 @@ ROS-NetSim is a ROS package that acts as an interface between robotic and networ
 Clone the repository and execute the following commands:
 
 ```
-cd <repo_root>
-source /opt/ros/melodic/setup.bash
-rosdep install -i --from-paths . -y
-catkin init
-catkin config --cmake-args -DPYTHON_EXECUTABLE=/path/to/python3
-catkin build
+# Force use of C++20 standard
+catkin_make --cmake-args -DCMAKE_CXX_STANDARD=20
 ```
 
 On the author's machine the python 3 executable was found at: ```/usr/bin/python3```
